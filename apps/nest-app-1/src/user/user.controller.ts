@@ -1,10 +1,21 @@
-import { Body, Controller, Delete, Get, Patch, Post } from '@nestjs/common';
+import {
+  Body,
+  Controller,
+  Delete,
+  Get,
+  Logger,
+  Patch,
+  Post,
+} from '@nestjs/common';
 import { User } from './user.model';
 import { UserService } from './user.service';
 
 @Controller('api/v1/user')
 export class UserController {
-  constructor(private readonly userService: UserService) {}
+  constructor(
+    private readonly userService: UserService,
+    private readonly logger: Logger,
+  ) {}
 
   @Get()
   async getAllUsers(): Promise<User[]> {

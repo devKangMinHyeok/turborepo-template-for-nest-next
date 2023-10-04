@@ -19,19 +19,20 @@
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
     "test:e2e": "jest --config ./test/jest-e2e.json",
-    "prisma:generate": "pnpx prisma generate && pnpm add ./prisma/prisma-client", 
+    "prisma:generate": "pnpx prisma generate",
     "prisma:migrate": "pnpx prisma migrate dev --name"
   },
   "dependencies": {
-    ".prisma/client": "link:prisma/prisma-client",
     "@nestjs/common": "^9.0.0",
     "@nestjs/config": "^3.1.1",
     "@nestjs/core": "^9.0.0",
     "@nestjs/platform-express": "^9.0.0",
     "@prisma/client": "^5.3.1",
+    "nest-winston": "^1.9.4",
     "prisma": "^5.3.1",
     "reflect-metadata": "^0.1.13",
-    "rxjs": "^7.2.0"
+    "rxjs": "^7.2.0",
+    "winston": "^3.10.0"
   },
   "devDependencies": {
     "@nestjs/cli": "^9.0.0",
