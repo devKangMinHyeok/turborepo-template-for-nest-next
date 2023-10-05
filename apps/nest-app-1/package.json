@@ -20,7 +20,10 @@
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
     "test:e2e": "jest --config ./test/jest-e2e.json",
     "prisma:generate": "pnpx prisma generate",
-    "prisma:migrate": "pnpx prisma migrate dev --name"
+    "prisma:migrate": "pnpx prisma migrate dev --name",
+    "prisma:studio": "pnpx prisma studio",
+    "docker-compose:up": "docker-compose up & pnpx prisma db push & pnpm run prisma:studio",
+    "docker-compose:down": "docker-compose down"
   },
   "dependencies": {
     "@nestjs/common": "^9.0.0",

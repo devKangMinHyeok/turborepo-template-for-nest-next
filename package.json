@@ -6,7 +6,10 @@
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "prisma:generate": "turbo run prisma:generate",
-    "prisma:migrate": "turbo run prisma:migrate"
+    "prisma:migrate": "turbo run prisma:migrate",
+    "prisma:studio": "turbo run prisma:studio",
+    "docker-compose:up": "turbo run docker-compose:up",
+    "docker-compose:down": "turbo run docker-compose:down"
   },
   "devDependencies": {
     "eslint": "^8.48.0",

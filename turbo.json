@@ -16,6 +16,15 @@
     },
     "prisma:migrate": {
       "cache": false
+    },
+    "prisma:studio": {
+      "cache": false
+    },
+    "docker-compose:up": {
+      "cache": false
+    },
+    "docker-compose:down": {
+      "cache": false
     }
   }
 }
